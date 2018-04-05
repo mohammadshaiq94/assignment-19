@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script> 
+
+        //  ********question no 1********
+
+
+        var d = new Date();
+        var n = d.getTime();
+        function User(_id, name, profileimg, createdAt, friends) {
+            this._id = _id;
+            this.name = name;
+            this.profileimg = profileimg;
+            this.createdAt = createdAt;
+            this.friends = friends;
+
+        }
+
+        var user1 = new User(1, "shaiq", "image1.jpg", n, [3, 7, 5, 4])
+        var user2 = new User(2, "samad", "image2.jpg", n, [1, 2, 3])
+        var user3 = new User(3, "junaid", "image3.jpg", n, [3, 4, 6])
+        var user4 = new User(4, "riaz", "image4.jpg", n, [4, 1, 2, 9])
+        var user5 = new User(5, "imran", "image5.jpg", n, [10, 4, 8])
+        var user6 = new User(6, "hasnain", "image6.jpg", n, [2, 6, 3, 9])
+        var user7 = new User(7, "yasha", "image7.jpg", n, [7, 10])
+        var user8 = new User(8, "hamza", "image8.jpg", n, [1, 4, 5])
+        var user9 = new User(9, "aden", "image9.jpg", n, [3, 7, 6])
+        var user10 = new User(10, "ahmed", "image10.jpg", n, [6, 9, 4])
+
+
+        var User = [];
+        User.push(user1);
+        User.push(user2);
+        User.push(user3);
+        User.push(user4);
+        User.push(user5);
+        User.push(user6);
+        User.push(user7);
+        User.push(user8);
+        User.push(user9);
+        User.push(user10);
+
+        function ShowFriends() {
+            for (var i = 0; i < User.length; i++) {
+                console.log("======== " + User[i].name + "'s friends ========");
+                for (var j = 0; j < User[i].friends.length; j++) {
+                    for (var k = 0; k < User.length; k++) {
+                        if (User[i].friends[j] == User[k]._id) {
+                            console.log(User[k].name);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        function addFriend(userId, _id) {
+            for (var i = 0; i < User.length; i++) {
+                if (userId == User[i]._id) {
+                    for (var j = 0; j < User.length; j++) {
+                        if (id == User[j]._id) {
+                            User[i].friends.push(User[j]._id);
+                            console.log(User[i].name + " and " + User[j].name + " are friends.")
+                            break
+                        }
+                    }
+                }
+                break;
+            }
+        }
+
+        function deleteFriend(userId, _id) {
+            for (var i = 0; i < User.length; i++) {
+                if (userId == User[i].id) {
+                    for (var j = 0; j < User[i].friends.length; j++) {
+                        if (id == User[i].friends[j]) {
+                            console.log(User[(User[i].friends[j]) - 1].name + " is deleted")
+                            User[i].friends.splice(j, 1);
+
+                            break
+                        }
+                    }
+                }
+            }
+        }
+        deleteFriend(1, 4);
+
+
+
+
+        //  ********question no 4********
+
+
+        //    *********1********
+        window.location.href
+        "https://www.google.com/"
+        //"gives the URL of the cuurent page for example here is URL of google"
+
+
+
+
+        //    *********2********
+        window.location.hostname
+        "www.google.com"
+        //"returns you the name of internet host of the cuurent page for example here is hostname of google"
+
+
+
+
+
+        //    *********3********
+        window.location.pathname
+        "/"
+        //"returns the pathname of the current page"
+
+
+
+
+
+        //    *********4********
+        window.location.hash
+        ""
+        //"it returns the anchor part of the URL"
+
+
+
+
+
+        //    *********5********
+        window.location.assign("http://www.facebook.com");
+        //"this  method loads a new document"
+
+
+
+
+
+
+        //    *********6********
+        window.location.replace("https://www.facebook.com/lojack.html#whatyousee");
+        //"this  method replace a with a new one document"
+
+
+
+
+
+        //    *********7********
+        window.location.reload(true);
+        //"it forces a page to reload if the value is true"
+
+        window.location.reload(false);
+        window.location.reload();
+        //"it forces a page to reload from the cache if the the value is false or there is no argument"
+
+
+
+
+
+
+        //    *********8********
+
+        history.back()
+        //"it get backs you to the previous URL once"
+
+        history.forward()
+        //"it force to go forward the browser just once"
+
+        history.go(2)
+        //"it gets forward the browser twice because of positive number"
+
+        history.go(-3)
+        //"it gets back the browser three times because of negative number"
+
+
+
+
+
+
+        //    *********9********
+        document.referrer
+        //"gives you the URI of the page that linked to the current page."
+
+
+
+
+
+        //    *********10********
+        window.open()
+        //"opens a new blank tab"
+
+
+
+        //    *********11********
+        var monkeyWindow = window.open();
+        monkeyWindow.document.write("<h1> Hello World </h1>");
+        setTimeout(function () { monkeyWindow.close() }, 5000);
+
+        //it gets write the Hello World to the new tab after 5 seconds because of setTimeout..
+
+
+
+
+
+        //    *********11********
+        window.open("monk.html", "win1", "width=420,height=380");
+        //it creates or open the pop up window of given width and height..
+    </script>
+</body>
+
+</html>
